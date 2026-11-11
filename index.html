@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enterprise Employer</title>
+<meta name="description" content="Meet and hire cute/funny characters and build them the perfect office.">
+<meta property="og:title" content="Enterprise Employer">
+<meta property="og:description" content="Meet and hire cute/funny characters and build them the perfect office.">
+<meta property="og:image" content="assets/screenshot-office.png">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<style>
+@font-face {
+  font-family: "M8";
+  src: url("assets/fonts/M_8px_Updated_For_Spanish.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --sky: #b9bff5;
+  --win: #d4d0c8;
+  --title: #000080;
+  --go: #12a312;
+  --go-dark: #0a6e0a;
+  --ink: #111;
+  --font: "M8", "Tahoma", "Verdana", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0 1rem 3rem;
+  font-family: var(--font);
+  font-size: 48px;
+  line-height: 0.8;
+  color: var(--ink);
+  -webkit-font-smoothing: none;
+  background-color: var(--sky);
+  background-image:
+    radial-gradient(ellipse 40% 30% at 15% 10%, #fff8, #fff0 70%),
+    radial-gradient(ellipse 35% 25% at 85% 35%, #7d83f066, #7d83f000 70%),
+    radial-gradient(ellipse 45% 30% at 30% 80%, #7d83f055, #7d83f000 70%);
+  background-attachment: fixed;
+}
+a { color: var(--title); }
+:focus-visible { outline: 3px solid #ff2fa8; outline-offset: 2px; }
+
+main { max-width: 1200px; margin: 0 auto; }
+h1, h2, p, ul { margin: 0; }
+h2 { font-size: 64px; font-weight: normal; color: var(--title); margin-bottom: 1rem; }
+p + p, p + ul, ul + p { margin-top: 1rem; }
+
+/* Hero: no window */
+.hero { text-align: center; padding: 2.5rem 0 0.5rem; }
+.logo { display: block; width: min(1100px, 100%); height: auto; margin: 0 auto 1rem; }
+.tag { max-width: 64ch; margin: 0 auto 2rem; font-size: 64px; line-height: 1.15; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font: inherit;
+  font-size: 64px;
+  text-decoration: none;
+  color: #fff;
+  background: var(--go);
+  padding: 0.5rem 1.5rem;
+  border: 3px solid;
+  border-color: #6be26b var(--go-dark) var(--go-dark) #6be26b;
+  box-shadow: 2px 2px 0 #000;
+}
+.btn:hover { background: #17b817; }
+.btn:active { border-color: var(--go-dark) #6be26b #6be26b var(--go-dark); }
+.btn svg { width: 1em; height: 1em; flex: none; }
+.note { margin-top: 1.5rem; }
+
+/* Windows */
+.win {
+  background: var(--win);
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  box-shadow: 1px 1px 0 #000, 6px 6px 0 #4b238055;
+  margin-top: 2.5rem;
+}
+.bar { background: var(--title); color: #fff; padding: 0.25rem 0.75rem;}
+.body { padding: 1.5rem; }
+
+.video { position: relative; aspect-ratio: 16 / 9; background: #000; border: 2px solid; border-color: #404040 #fff #fff #404040; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.alt { margin-top: 1rem; }
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.75rem; }
+li::marker { color: var(--title); }
+
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.shots img { width: 100%; height: auto; display: block; border: 2px solid; border-color: #404040 #fff #fff #404040; }
+.shots .wide { grid-column: 1 / -1; }
+
+footer { margin-top: 2rem; text-align: center; color: #1b0a38; }
+
+@media (max-width: 640px) {
+  body { font-size: 32px; }
+  h2, .tag, .btn { font-size: 48px; }
+  .shots { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1><img class="logo" src="assets/logo.png" alt="Enterprise Employer" width="1280" height="604"></h1>
+    <p class="tag">Meet and hire cute/funny characters and build them the perfect office.</p>
+    <a class="btn" href="https://store.steampowered.com/app/5075520/Enterprise_Employer/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+      Wishlist on Steam
+    </a>
+  </header>
+
+  <section class="win">
+    <div class="bar">Trailer</div>
+    <div class="body">
+      <div class="video">
+		  <iframe
+            src="https://www.youtube-nocookie.com/embed/JQng_adZSeg?rel=0&modestbranding=1"
+            title="Enterprise Employer trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen=""
+            loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="win">
+    <div class="bar">About this game</div>
+    <div class="body">
+      <p>Enterprise Employer is a small cozy office manager with a retro Windows 98 aesthetic.</p>
+      <ul>
+        <li>Meet and hire over 120 characters with each their own personality and office preferences.</li>
+        <li>Build and organise the office for your employees to be happy to earn coins and progress.</li>
+        <li>Make your office feel like home with 100+ furniture and painting options.</li>
+        <li>Expand your office and encounter new puzzle &amp; management challenges.</li>
+      </ul>
+      <p>Relaxing dynamic soundtrack. Special personality system based on the DISC model used by real companies</p>
+	   <p>Expected playtime: 2-3 hours.</p>
+    </div>
+  </section>
+
+  <section class="win">
+    <div class="bar">Screenshots</div>
+    <div class="body">
+      <div class="shots">
+        <img class="wide" src="assets/screenshot-office.png" alt="An isometric office with cubicles, plants and a tree" loading="lazy">
+        <img src="assets/screenshot-interview.png" alt="A video call interview with a candidate named Dex" loading="lazy">
+        <img src="assets/screenshot-pink-dream.png" alt="The office in a pink and purple theme" loading="lazy">
+      </div>
+    </div>
+  </section>
+</main>
+<footer>&copy; Gratified Lil' Guys</footer>
+</body>
+</html>
